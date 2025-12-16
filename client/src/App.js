@@ -1,6 +1,5 @@
 import { Users, BookOpen, Calendar, FileText, Plus, Search, TrendingUp, Award, LogOut, X, Moon, Sun } from 'lucide-react';
 import React, { useState, useEffect, useCallback } from 'react';
-const API_URL = 'http://localhost:5000/api';
 
 // Fetch wrapper to replace axios
 const apiCall = async (endpoint, options = {}) => {
@@ -11,7 +10,7 @@ const apiCall = async (endpoint, options = {}) => {
     ...options.headers
   };
 
-  const response = await fetch(`${API_URL}${endpoint}`, {
+  const response = await fetch(`${process.env.REACT_APP_API_URL}${endpoint}`, {
     ...options,
     headers
   });
