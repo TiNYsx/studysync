@@ -9,6 +9,7 @@ const app = express();
 // Middleware
 app.use(cors({
     origin: ["https://studysync-mocha.vercel.app/", "studysync-tinysxs-projects.vercel.app"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
 }));
 app.use(express.json());
