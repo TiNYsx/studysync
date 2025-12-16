@@ -8,7 +8,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-    origin: ["https://studysync-mocha.vercel.app/", "studysync-tinysxs-projects.vercel.app"],
+    origin: ["https://studysync-mocha.vercel.app", "https://studysync-tinysxs-projects.vercel.app", "https://studysync-git-main-tinysxs-projects.vercel.app"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
 }));
@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // MongoDB Connection
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/studysync')
+mongoose.connect(process.env.MONGODB_URI)
 .then(() => console.log('✅ MongoDB Connected'))
 .catch((err) => console.error('❌ MongoDB Connection Error:', err));
 
