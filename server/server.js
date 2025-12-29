@@ -8,7 +8,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-    origin: ["https://studysync-mocha.vercel.app", "https://studysync-tinysxs-projects.vercel.app", "https://studysync-git-main-tinysxs-projects.vercel.app"],
+    origin: ["https://studysync-mocha.vercel.app", "https://studysync-tinysxs-projects.vercel.app", "https://studysync-git-main-tinysxs-projects.vercel.app", "http://localhost:3000"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
 }));
